@@ -7,14 +7,24 @@ import org.springframework.web.bind.annotation.ResponseBody;
 @Controller
 public class ViewController {
 	
-	@RequestMapping("/menu")
+	@RequestMapping("/login")
     @ResponseBody
+    public String login() {
+        return "Login";
+    }
+	
+	@RequestMapping("/signup")
+	@ResponseBody
+    public String signUp() {
+        return "SignUp";
+    }
+	
+	@RequestMapping("/menu")
     public String menu() {
         return "Menu";
     }
 	
 	@RequestMapping("/newproduct")
-    @ResponseBody
     public String newProduct() {
         return "NewProduct";
     }
