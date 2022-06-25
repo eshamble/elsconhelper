@@ -1,4 +1,6 @@
 package com.perscholas.conhelper.model;
+import java.util.Set;
+
 import javax.persistence.*;
 
 @Entity
@@ -11,6 +13,21 @@ public class User {
 	
 	@Column(name = "password")
     private String password;
+	
+	@ManyToMany(cascade = {CascadeType.PERSIST, CascadeType.MERGE})
+    private Set<Convention> conventions;
+	
+	@ManyToMany(cascade = {CascadeType.PERSIST, CascadeType.MERGE})
+    private Set<Design> designs;
+	
+	@ManyToMany(cascade = {CascadeType.PERSIST, CascadeType.MERGE})
+    private Set<Fandom> fandoms;
+	
+	@ManyToMany(cascade = {CascadeType.PERSIST, CascadeType.MERGE})
+    private Set<Item> items;
+	
+	@ManyToMany(cascade = {CascadeType.PERSIST, CascadeType.MERGE})
+    private Set<Purchase> purchases;
 	
 	public User() {
 

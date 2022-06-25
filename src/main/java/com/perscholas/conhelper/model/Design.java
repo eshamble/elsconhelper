@@ -8,9 +8,6 @@ public class Design {
 	@Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private long id;
-
-	@Column(name = "userId")
-	private long userId;
 	
     @Column(name = "name")
     private String name;
@@ -25,8 +22,7 @@ public class Design {
     	
     }
     
-    public Design(long userId, String name, long fandom) {
-    	this.userId = userId;
+    public Design(String name, long fandom) {
     	this.name = name;
     	this.fandom = fandom;
     }
@@ -49,14 +45,6 @@ public class Design {
 
 	public long getId() {
 		return id;
-	}
-    
-	public long getUserId() {
-		return userId;
-	}
-
-	public void setUserId(long userId) {
-		this.userId = userId;
 	}
 
 	public boolean isActive() {
