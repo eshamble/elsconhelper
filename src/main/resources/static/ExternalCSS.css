@@ -1,7 +1,8 @@
 @charset "ISO-8859-1";
 
 body{
-    background-image: url('background.jpg');
+    /*background-image: {[[@{/images/background.jpg}]]};*/
+    /*url{[[@{/img/Background.jpg}]]}*/
     background-size: cover;
     background-color:rgb(137, 124, 162);
     background-blend-mode: overlay;

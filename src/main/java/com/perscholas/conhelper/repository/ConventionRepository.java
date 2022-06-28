@@ -6,6 +6,6 @@ import java.util.List;
 import java.util.Optional;
 import com.perscholas.conhelper.model.*;
 @Repository
-public interface UserRepository extends JpaRepository<User, String> {
-	
+public interface ConventionRepository extends JpaRepository<Convention, Long>{
+
 }
