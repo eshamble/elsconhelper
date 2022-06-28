@@ -7,16 +7,16 @@ public interface UserService {
 	User saveUser(User user);
 	User getUserByEmail(String email);
 	
-	Convention addConvention(Convention con);
+	Convention addConvention(User user, Convention con);
 	List<Convention> getConventionsByUserId(long Id);
 	
-	Design addDesign(Design des);
+	Design addDesign(User user, Design des);
 	List<Design> getDesignsByUserId(long Id);
 	
-	Fandom addFandom(Fandom fan);
+	Fandom addFandom(User user, Fandom fan);
 	List<Fandom> getFandomsByUserId(long Id);
 	
-	Item addItem(Item item);
+	Item addItem(User user, Item item);
 	List<Item> getItemsByUserId(long id);
 	
 }
