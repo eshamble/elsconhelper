@@ -20,49 +20,48 @@ public class UserServiceImpl implements UserService{
 	}
 
 	@Override
-	public void addConvention(User user, Convention con) {
+	public void addConvention(String email, Convention con) {
 		// TODO Auto-generated method stub
-		user.addConvention(con);
 	}
 
 	@Override
-	public List<Convention> getConventionsByUserId(long Id) {
-		// TODO Auto-generated method stub
-		return null;
-	}
-
-	@Override
-	public void addDesign(User user, Design des) {
-		// TODO Auto-generated method stub
-		
-	}
-
-	@Override
-	public List<Design> getDesignsByUserId(long Id) {
+	public List<Convention> getConventionsByUserId(String email) {
 		// TODO Auto-generated method stub
 		return null;
 	}
 
 	@Override
-	public void addFandom(User user, Fandom fan) {
+	public void addDesign(String email, Design des) {
 		// TODO Auto-generated method stub
 		
 	}
 
 	@Override
-	public List<Fandom> getFandomsByUserId(long Id) {
+	public List<Design> getDesignsByUserId(String email) {
 		// TODO Auto-generated method stub
 		return null;
 	}
 
 	@Override
-	public void addItem(User user, Item item) {
+	public void addFandom(String email, Fandom fan) {
 		// TODO Auto-generated method stub
 		
 	}
 
 	@Override
-	public List<Item> getItemsByUserId(long id) {
+	public List<Fandom> getFandomsByUserId(String email) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public void addItem(String email, Item item) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public List<Item> getItemsByUserId(String email) {
 		// TODO Auto-generated method stub
 		return null;
 	}

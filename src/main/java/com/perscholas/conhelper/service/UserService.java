@@ -7,16 +7,16 @@ public interface UserService {
 	User saveUser(User user);
 	User getUserByEmail(String email);
 	
-	void addConvention(User user, Convention con);
-	List<Convention> getConventionsByUserId(long Id);
+	void addConvention(String email, Convention con);
+	List<Convention> getConventionsByUserId(String email);
 	
-	void addDesign(User user, Design des);
-	List<Design> getDesignsByUserId(long Id);
+	void addDesign(String email, Design des);
+	List<Design> getDesignsByUserId(String email);
 	
-	void addFandom(User user, Fandom fan);
-	List<Fandom> getFandomsByUserId(long Id);
+	void addFandom(String email, Fandom fan);
+	List<Fandom> getFandomsByUserId(String email);
 	
-	void addItem(User user, Item item);
-	List<Item> getItemsByUserId(long id);
+	void addItem(String email, Item item);
+	List<Item> getItemsByUserId(String email);
 	
 }
