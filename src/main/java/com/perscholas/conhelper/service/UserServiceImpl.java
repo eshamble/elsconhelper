@@ -2,11 +2,16 @@ package com.perscholas.conhelper.service;
 
 import java.util.*;
 
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
 import com.perscholas.conhelper.model.*;
 import com.perscholas.conhelper.repository.*;
 
+@Service
 public class UserServiceImpl implements UserService{
 	
+	@Autowired
 	private UserRepository repo;
 
 	@Override
