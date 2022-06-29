@@ -6,7 +6,7 @@ import com.perscholas.conhelper.model.*;
 import com.perscholas.conhelper.repository.*;
 public class ConventionServiceImpl implements ConventionService{
 	
-	ConventionRepository repo;
+	private ConventionRepository repo;
 	@Override
 	public Convention getConventionById(long Id) {
 		// TODO Auto-generated method stub

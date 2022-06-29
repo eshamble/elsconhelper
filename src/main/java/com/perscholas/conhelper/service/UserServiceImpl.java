@@ -11,20 +11,18 @@ public class UserServiceImpl implements UserService{
 
 	@Override
 	public User saveUser(User user) {
-		// TODO Auto-generated method stub
-		return null;
+		return repo.save(user);
 	}
 
 	@Override
 	public User getUserByEmail(String email) {
-		// TODO Auto-generated method stub
-		return null;
+		return repo.findById(email).get();
 	}
 
 	@Override
-	public Convention addConvention(User user, Convention con) {
+	public void addConvention(User user, Convention con) {
 		// TODO Auto-generated method stub
-		return null;
+		user.addConvention(con);
 	}
 
 	@Override
@@ -34,9 +32,9 @@ public class UserServiceImpl implements UserService{
 	}
 
 	@Override
-	public Design addDesign(User user, Design des) {
+	public void addDesign(User user, Design des) {
 		// TODO Auto-generated method stub
-		return null;
+		
 	}
 
 	@Override
@@ -46,9 +44,9 @@ public class UserServiceImpl implements UserService{
 	}
 
 	@Override
-	public Fandom addFandom(User user, Fandom fan) {
+	public void addFandom(User user, Fandom fan) {
 		// TODO Auto-generated method stub
-		return null;
+		
 	}
 
 	@Override
@@ -58,9 +56,9 @@ public class UserServiceImpl implements UserService{
 	}
 
 	@Override
-	public Item addItem(User user, Item item) {
+	public void addItem(User user, Item item) {
 		// TODO Auto-generated method stub
-		return null;
+		
 	}
 
 	@Override

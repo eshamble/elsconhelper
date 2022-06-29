@@ -26,9 +26,6 @@ public class User {
 	@ManyToMany(cascade = {CascadeType.PERSIST, CascadeType.MERGE})
     private Set<Item> items;
 	
-	@ManyToMany(cascade = {CascadeType.PERSIST, CascadeType.MERGE})
-    private Set<Purchase> purchases;
-	
 	public User() {
 
     }
@@ -52,6 +49,38 @@ public class User {
 
 	public void setPassword(String password) {
 		this.password = password;
+	}
+	
+	public void addConvention(Convention c) {
+		try {
+			conventions.add(c);
+		}catch(Exception e) {
+			System.out.println(e);
+		}
+	}
+	
+	public void addDesign(Design d) {
+		try {
+			designs.add(d);
+		}catch(Exception e) {
+			System.out.println(e);
+		}
+	}
+	
+	public void addFandom(Fandom f) {
+		try {
+			fandoms.add(f);
+		}catch(Exception e) {
+			System.out.println(e);
+		}
+	}
+	
+	public void addItem(Item item) {
+		try {
+			items.add(item);
+		}catch(Exception e) {
+			System.out.println(e);
+		}
 	}
 	
 	@Override
