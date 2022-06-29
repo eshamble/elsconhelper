@@ -1,6 +1,6 @@
 package com.perscholas.conhelper.service;
 
-import java.util.List;
+import java.util.*;
 
 import com.perscholas.conhelper.model.*;
 import com.perscholas.conhelper.repository.*;
@@ -14,13 +14,13 @@ public class ConventionServiceImpl implements ConventionService{
 	}
 
 	@Override
-	public List<Purchase> getConventionPurchasesById(long Id) {
+	public Set<Purchase> getConventionPurchasesById(long Id) {
 		// TODO Auto-generated method stub
 		return null;
 	}
 
 	@Override
-	public void addPurchase(Convention con, Purchase pur) {
+	public void addPurchase(long Id, Purchase pur) {
 		// TODO Auto-generated method stub
 		
 	}

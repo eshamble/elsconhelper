@@ -6,7 +6,7 @@ public interface ConventionService {
 
 	Convention getConventionById(long Id);
 	
-	List<Purchase> getConventionPurchasesById(long Id);
-	void addPurchase(Convention con, Purchase pur);
+	Set<Purchase> getConventionPurchasesById(long Id);
+	void addPurchase(long Id, Purchase pur);
 	
 }
