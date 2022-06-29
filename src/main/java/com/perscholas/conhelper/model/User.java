@@ -51,6 +51,38 @@ public class User {
 		this.password = password;
 	}
 	
+	public Set<Convention> getConventions() {
+		return conventions;
+	}
+
+	public void setConventions(Set<Convention> conventions) {
+		this.conventions = conventions;
+	}
+
+	public Set<Design> getDesigns() {
+		return designs;
+	}
+
+	public void setDesigns(Set<Design> designs) {
+		this.designs = designs;
+	}
+
+	public Set<Fandom> getFandoms() {
+		return fandoms;
+	}
+
+	public void setFandoms(Set<Fandom> fandoms) {
+		this.fandoms = fandoms;
+	}
+
+	public Set<Item> getItems() {
+		return items;
+	}
+
+	public void setItems(Set<Item> items) {
+		this.items = items;
+	}
+
 	public void addConvention(Convention c) {
 		try {
 			conventions.add(c);

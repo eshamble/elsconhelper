@@ -1,6 +1,6 @@
 package com.perscholas.conhelper.service;
 
-import java.util.List;
+import java.util.*;
 
 import com.perscholas.conhelper.model.*;
 import com.perscholas.conhelper.repository.*;
@@ -21,13 +21,14 @@ public class UserServiceImpl implements UserService{
 
 	@Override
 	public void addConvention(String email, Convention con) {
-		// TODO Auto-generated method stub
+		User u = getUserByEmail(email);
+		u.addConvention(con);
 	}
 
 	@Override
-	public List<Convention> getConventionsByUserId(String email) {
-		// TODO Auto-generated method stub
-		return null;
+	public Set<Convention> getConventionsByUserId(String email) {
+		User u = getUserByEmail(email);
+		return u.getConventions();
 	}
 
 	@Override
@@ -37,7 +38,7 @@ public class UserServiceImpl implements UserService{
 	}
 
 	@Override
-	public List<Design> getDesignsByUserId(String email) {
+	public Set<Design> getDesignsByUserId(String email) {
 		// TODO Auto-generated method stub
 		return null;
 	}
@@ -49,7 +50,7 @@ public class UserServiceImpl implements UserService{
 	}
 
 	@Override
-	public List<Fandom> getFandomsByUserId(String email) {
+	public Set<Fandom> getFandomsByUserId(String email) {
 		// TODO Auto-generated method stub
 		return null;
 	}
@@ -61,7 +62,7 @@ public class UserServiceImpl implements UserService{
 	}
 
 	@Override
-	public List<Item> getItemsByUserId(String email) {
+	public Set<Item> getItemsByUserId(String email) {
 		// TODO Auto-generated method stub
 		return null;
 	}
