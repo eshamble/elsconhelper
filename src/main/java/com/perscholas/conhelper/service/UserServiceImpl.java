@@ -33,38 +33,39 @@ public class UserServiceImpl implements UserService{
 
 	@Override
 	public void addDesign(String email, Design des) {
-		// TODO Auto-generated method stub
+		User u = getUserByEmail(email);
+		u.addDesign(des);
 		
 	}
 
 	@Override
 	public Set<Design> getDesignsByUserId(String email) {
-		// TODO Auto-generated method stub
-		return null;
+		User u = getUserByEmail(email);
+		return u.getDesigns();
 	}
 
 	@Override
 	public void addFandom(String email, Fandom fan) {
-		// TODO Auto-generated method stub
-		
+		User u = getUserByEmail(email);
+		u.addFandom(fan);
 	}
 
 	@Override
 	public Set<Fandom> getFandomsByUserId(String email) {
-		// TODO Auto-generated method stub
-		return null;
+		User u = getUserByEmail(email);
+		return u.getFandoms();
 	}
 
 	@Override
 	public void addItem(String email, Item item) {
-		// TODO Auto-generated method stub
-		
+		User u = getUserByEmail(email);
+		u.addItem(item);
 	}
 
 	@Override
 	public Set<Item> getItemsByUserId(String email) {
-		// TODO Auto-generated method stub
-		return null;
+		User u = getUserByEmail(email);
+		return u.getItems();
 	}
 
 }
