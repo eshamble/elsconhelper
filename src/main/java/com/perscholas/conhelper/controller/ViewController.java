@@ -5,15 +5,27 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
 
+import com.perscholas.conhelper.repository.*;
 import com.perscholas.conhelper.service.*;
+import com.perscholas.conhelper.model.*;
+
+import java.util.*;
 
 @Controller
 public class ViewController {
 	
 	@Autowired
 	private UserServiceImpl userService;
+	
+	ConventionRepository conRepo;
+	DesignRepository designRepo;
+	FandomRepository fanRepo;
+	ItemRepository itemRepo;
+	PurchaseRepository purchaseRepo;
+	UserRepository userRepo;
 	
 	@RequestMapping("/login")
     @ResponseBody
@@ -38,11 +50,11 @@ public class ViewController {
     }
 	
 	// handler method to handle list students and return mode and view
-		@GetMapping("/itens")
-		public String listItems(Model model) {
-			
-			model.addAttribute("items", 
-					userService.getUserByEmail("eleanorshamble@yahoo.com").getItems());
-			return "ItemList";
+		@RequestMapping(value = "items", method = RequestMethod.GET)
+		@ResponseBody
+		public Set<Item> itemList(Map<String, Object> model) {
+			User user = userService.getUserByEmail("eleanorshamble@yahoo.com");
+			Set<Item> items =  user.getItems();
+			return items;
 		}
 }

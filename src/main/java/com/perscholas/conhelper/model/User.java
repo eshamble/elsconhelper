@@ -1,4 +1,6 @@
 package com.perscholas.conhelper.model;
+import java.util.HashSet;
+import java.util.Iterator;
 import java.util.Set;
 
 import javax.persistence.*;
