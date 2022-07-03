@@ -14,12 +14,12 @@
 			<th> Item Sales Price</th>
 		</tr>
 		<tbody>
-					<tr th:each = "items: ${item}">
+					<tr th:each = "item, iStat : ${items}">
 						<td th:text = "${item.id}"></td>
 						<td th:text = "${item.type}"></td>
 						<td th:text = "${item.size}"></td>
 						<td th:text = "${item.price}"></td>
-						<td th:text = "${item.sale_price}"></td>
+						<td th:text = "${item.salePrice}"></td>
 					</tr>
 				</tbody>
 	</table>
