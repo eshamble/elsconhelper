@@ -28,6 +28,9 @@ public class User {
 	@ManyToMany(cascade = {CascadeType.PERSIST, CascadeType.MERGE})
     private Set<Item> items;
 	
+	@ManyToMany(cascade = {CascadeType.PERSIST, CascadeType.MERGE})
+    private Set<InventoryItem> inventoryItems;
+	
 	public User() {
 
     }

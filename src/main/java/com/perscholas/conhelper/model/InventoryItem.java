@@ -23,6 +23,9 @@ public class InventoryItem {
 	@Column(name = "design_id")
 	private long designId;
 	
+	@Column(name = "stock")
+	private int stock;
+	
 	public InventoryItem() {
 		
 	}
@@ -50,6 +53,14 @@ public class InventoryItem {
 
 	public long getId() {
 		return id;
+	}
+
+	public int getStock() {
+		return stock;
+	}
+
+	public void setStock(int stock) {
+		this.stock = stock;
 	}
 
 	/*@Override
