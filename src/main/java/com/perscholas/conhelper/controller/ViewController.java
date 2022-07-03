@@ -49,13 +49,11 @@ public class ViewController {
         return "NewProduct";
     }
 		
-		@RequestMapping("/itemsListPage")
-	    public String itemListPage(Map<String, Object> model) {
-	 
-	       User user = userService.getUserByEmail("eleanorshamble@yahoo.com");
-			Set<Item> items =  user.getItems();
-	       model.put("items", items);
-	 
-	       return "ItemList";    
-	    }
+	@RequestMapping("/items")
+	public String itemListPage(Map<String, Object> model) {
+		User user = userService.getUserByEmail("eleanorshamble@yahoo.com");
+		Set<Item> items =  user.getItems();
+	    model.put("items", items);
+	    return "ItemList";    
+	}
 }
