@@ -21,13 +21,11 @@ public class ViewController {
 	private UserServiceImpl userService;
 	
 	@RequestMapping("/login")
-    @ResponseBody
     public String login() {
         return "Login";
     }
 	
 	@RequestMapping("/signup")
-	@ResponseBody
     public String signUp() {
         return "SignUp";
     }
