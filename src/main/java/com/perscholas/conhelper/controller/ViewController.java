@@ -42,11 +42,19 @@ public class ViewController {
         return "NewProduct";
     }*/
 		
-	@RequestMapping("/productTypes")
+	@RequestMapping("/producttypes")
 	public String productTypesPage(Map<String, Object> model) {
 		User user = userService.getUserByEmail("eleanorshamble@yahoo.com");
 		Set<Item> items =  user.getItems();
 	    model.put("items", items);
 	    return "ItemList";    
+	}
+	
+	@RequestMapping("/fandoms")
+	public String fandomsPage(Map<String, Object> model) {
+		User user = userService.getUserByEmail("eleanorshamble@yahoo.com");
+		Set<Fandom> fandoms =  user.getFandoms();
+	    model.put("fandoms", fandoms);
+	    return "FandomList";    
 	}
 }

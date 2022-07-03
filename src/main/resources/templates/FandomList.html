@@ -2,7 +2,7 @@
 <html xmlns:th="http://www.thymeleaf.org">
 <head>
 <meta charset="ISO-8859-1">
-<title>product list</title>
+<title>fandom list</title>
 </head>
 <head>
     <meta charset="UTF-8">
@@ -14,24 +14,18 @@
 <body>
 	<div class = "contentContainer">
         <div class="content">
-        	<h1>product types</h1>
+        	<h1>fandoms</h1>
 			<table>
 				<tr>
 					<th>Id</th>
-					<th>Type</th>
-					<th>Size</th>
-					<th>Price</th>
-					<th>Sales Price</th>
+					<th>Name</th>
 					<th></th>
 					<th></th>
 				</tr>
 				<tbody>
-					<tr th:each = "item, iStat : ${items}">
-						<td th:text = "${item.id}"></td>
-						<td th:text = "${item.type}"></td>
-						<td th:text = "${item.size}"></td>
-						<td th:text = "${item.price}"></td>
-						<td th:text = "${item.salePrice}"></td>
+					<tr th:each = "fandom, iStat : ${fandoms}">
+						<td th:text = "${fandom.id}"></td>
+						<td th:text = "${fandom.name}"></td>
 						<td>
 							<a>update</a>
 							<a>delete</a>
