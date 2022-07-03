@@ -20,13 +20,6 @@ public class ViewController {
 	@Autowired
 	private UserServiceImpl userService;
 	
-	ConventionRepository conRepo;
-	DesignRepository designRepo;
-	FandomRepository fanRepo;
-	ItemRepository itemRepo;
-	PurchaseRepository purchaseRepo;
-	UserRepository userRepo;
-	
 	@RequestMapping("/login")
     @ResponseBody
     public String login() {
@@ -41,13 +34,13 @@ public class ViewController {
 	
 	@RequestMapping("/menu")
     public String menu() {
-        return "Menu";
+        return "NewMenu";
     }
 	
-	@RequestMapping("/newproduct")
+	/*@RequestMapping("/newproduct")
     public String newProduct() {
         return "NewProduct";
-    }
+    }*/
 		
 	@RequestMapping("/items")
 	public String itemListPage(Map<String, Object> model) {
