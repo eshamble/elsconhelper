@@ -55,4 +55,9 @@ public class ViewController {
 	    model.put("fandoms", fandoms);
 	    return "FandomList";    
 	}
+	
+	@RequestMapping("/newfandom")
+    public String newFandom() {
+        return "NewFandom";
+    }
 }
