@@ -48,15 +48,6 @@ public class ViewController {
     public String newProduct() {
         return "NewProduct";
     }
-	
-	// handler method to handle list students and return mode and view
-		@RequestMapping(value = "items", method = RequestMethod.GET)
-		@ResponseBody
-		public Set<Item> itemList(Map<String, Object> model) {
-			User user = userService.getUserByEmail("eleanorshamble@yahoo.com");
-			Set<Item> items =  user.getItems();
-			return items;
-		}
 		
 		@RequestMapping("/itemsListPage")
 	    public String itemListPage(Map<String, Object> model) {
