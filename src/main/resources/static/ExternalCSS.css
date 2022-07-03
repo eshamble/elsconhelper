@@ -53,6 +53,12 @@ h2{
     margin: 10px;
 }
 
+th, td{
+    font-family: Arial, Helvetica, sans-serif;
+    color:white;
+    text-align:center;
+}
+
 button{
     margin-top:5px;
     margin-bottom:5px;

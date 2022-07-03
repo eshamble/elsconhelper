@@ -42,8 +42,8 @@ public class ViewController {
         return "NewProduct";
     }*/
 		
-	@RequestMapping("/items")
-	public String itemListPage(Map<String, Object> model) {
+	@RequestMapping("/productTypes")
+	public String productTypesPage(Map<String, Object> model) {
 		User user = userService.getUserByEmail("eleanorshamble@yahoo.com");
 		Set<Item> items =  user.getItems();
 	    model.put("items", items);
