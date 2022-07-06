@@ -14,16 +14,18 @@
 <body>
 	<div class = "contentContainer">
         <div class="content">
-        	<form>
+        	<form th:action="@{/fandoms}" th:object = "${fandom}" method="POST">
         		<h1>new fandom</h1>
         		<input 
                     type = "text"
                     id = "fandomName"
                     name = "fandomName"
                     placeholder = "fandom name"
+                    th:field = "*{name}"
                     />
-        		<button>submit</button>
+        		<button type="submit">submit</button>
         	</form>
+        	<a th:href="@{/menu}"><button>back to menu</button></a>
         </div>
     </div>
 </body>
